@@ -62,7 +62,6 @@ public class Enemy {
                 System.out.println(this.name +" died!");
                 setHealth(0);
             }
-            setDefense(0);
         }
     }
 }

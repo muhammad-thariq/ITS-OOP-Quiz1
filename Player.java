@@ -53,19 +53,16 @@ public class Player {
     }
     public void takeDamage(Enemy enemy) {
 
-        //subtract the defense 
-        setDefense(this.defense - enemy.power);
-
         // if defense is less than or equal to 0, the player health is subtracted since defense will be minus 
-        if (getDefense() <= 0) {
-            setHealth(this.health += this.defense);
+        if (getDefense() < enemy.power) {
+            setHealth(this.health += (enemy.power-this.defense);
 
             // if health becomes less than or equal to 0, the player dies
             if (getHealth() <= 0) {
                 System.out.println(this.name +" died!");
                 setHealth(0);
             }
-            setDefense(0);
+
         }
     }
 }
